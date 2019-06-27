@@ -8,7 +8,7 @@ public class Creeper : MonoBehaviour {
     public float sellCost;
     public float fireCooldown;
     public Material gunpowder;
-    public Material creeper0;
+    //public Material creeper0;
     private bool loaded;
     private float fireCDRemaining;
 
@@ -81,7 +81,7 @@ public class Creeper : MonoBehaviour {
                 if(fireCDRemaining <= 0)
                 {
                     loaded = true;
-                    gameObject.GetComponent<MeshRenderer>().material = creeper0;
+                    GetComponent<MeshRenderer>().material = gameObject.GetComponent<BaseMob>().Material();
                 }
             }
         }

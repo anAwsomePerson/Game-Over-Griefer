@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1535376487225746
+--- !u!1 &1286474409758586
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4986555012765822}
-  - component: {fileID: 33691584338831864}
-  - component: {fileID: 65295747393274902}
-  - component: {fileID: 23898124782149872}
-  - component: {fileID: 114916270611047750}
-  - component: {fileID: 114502301555960624}
+  - component: {fileID: 4919606589268322}
+  - component: {fileID: 33674154424656480}
+  - component: {fileID: 65276865232789930}
+  - component: {fileID: 23261011606223684}
+  - component: {fileID: 114521458132262028}
+  - component: {fileID: 114125444723461442}
   m_Layer: 0
-  m_Name: Skeleton0
+  m_Name: Creeper
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4986555012765822
+--- !u!4 &4919606589268322
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535376487225746}
+  m_GameObject: {fileID: 1286474409758586}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 48, y: 2, z: 48}
@@ -35,34 +35,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &33691584338831864
+--- !u!33 &33674154424656480
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535376487225746}
+  m_GameObject: {fileID: 1286474409758586}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65295747393274902
+--- !u!65 &65276865232789930
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535376487225746}
+  m_GameObject: {fileID: 1286474409758586}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &23898124782149872
+--- !u!23 &23261011606223684
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535376487225746}
+  m_GameObject: {fileID: 1286474409758586}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 3b5640089bdbc13428bb100ac2a69087, type: 2}
+  - {fileID: 2100000, guid: dd716a23c40bbf345bdfaf1ca28fd759, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,40 +93,41 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114916270611047750
+--- !u!114 &114521458132262028
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535376487225746}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a8ac542d98a9ea047bbf4e795f0a882c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 1408228870502992, guid: cfee21b7c0e90bf48b6af5bf8e0752b6,
-    type: 3}
-  fireCooldown: 1
-  damage: 1
-  radius: 0
-  type: 0
-  range: 128
---- !u!114 &114502301555960624
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1535376487225746}
+  m_GameObject: {fileID: 1286474409758586}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06b0eee7bf57af04693f5ada16aa7a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 0
-  cost: 4
-  buyCooldown: 3
-  upgradeCost: 3
-  abbrev: Sk
-  baseSprite: {fileID: 21300000, guid: 86cac600bdc2a284b8aa0f17cdb77882, type: 3}
+  id: 8
+  cost: 3
+  buyCooldown: 13
+  upgradeCost: 2
+  abbrev: Cr
+  materials:
+  - {fileID: 2100000, guid: dd716a23c40bbf345bdfaf1ca28fd759, type: 2}
+  - {fileID: 2100000, guid: 811018ba1cc5b5344ad579eb07dfbc41, type: 2}
+  - {fileID: 2100000, guid: f10928af56c133748b1dceeb0c240aaf, type: 2}
+--- !u!114 &114125444723461442
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1286474409758586}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38fe3211cde4b5748b4280c15d0a2418, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 5
+  radius: 64
+  sellCost: 1
+  fireCooldown: 6
+  gunpowder: {fileID: 2100000, guid: f896970baf4ddf44f9dd1e69df65b2ef, type: 2}

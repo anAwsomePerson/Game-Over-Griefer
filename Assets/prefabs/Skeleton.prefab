@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1317880580496708
+--- !u!1 &1535376487225746
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4186234945381662}
-  - component: {fileID: 33695546256994134}
-  - component: {fileID: 65697338317467358}
-  - component: {fileID: 23152643970609926}
-  - component: {fileID: 114076133381200688}
-  - component: {fileID: 114297720911553684}
+  - component: {fileID: 4986555012765822}
+  - component: {fileID: 33691584338831864}
+  - component: {fileID: 65295747393274902}
+  - component: {fileID: 23898124782149872}
+  - component: {fileID: 114916270611047750}
+  - component: {fileID: 114502301555960624}
   m_Layer: 0
-  m_Name: Evoker0
+  m_Name: Skeleton
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4186234945381662
+--- !u!4 &4986555012765822
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317880580496708}
+  m_GameObject: {fileID: 1535376487225746}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 48, y: 2, z: 48}
@@ -35,34 +35,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &33695546256994134
+--- !u!33 &33691584338831864
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317880580496708}
+  m_GameObject: {fileID: 1535376487225746}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65697338317467358
+--- !u!65 &65295747393274902
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317880580496708}
+  m_GameObject: {fileID: 1535376487225746}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &23152643970609926
+--- !u!23 &23898124782149872
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317880580496708}
+  m_GameObject: {fileID: 1535376487225746}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f5f9301461858be45a223e870b35c642, type: 2}
+  - {fileID: 2100000, guid: 3b5640089bdbc13428bb100ac2a69087, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,39 +93,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114076133381200688
+--- !u!114 &114916270611047750
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317880580496708}
+  m_GameObject: {fileID: 1535376487225746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a8ac542d98a9ea047bbf4e795f0a882c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrowPrefab: {fileID: 1408228870502992, guid: cfee21b7c0e90bf48b6af5bf8e0752b6,
+    type: 3}
+  fireCooldown: 1
+  damage: 1
+  type: 0
+  range: 128
+--- !u!114 &114502301555960624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1535376487225746}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06b0eee7bf57af04693f5ada16aa7a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 7
+  id: 0
   cost: 4
-  buyCooldown: 10
+  buyCooldown: 3
   upgradeCost: 3
-  abbrev: Ev
-  baseSprite: {fileID: 21300000, guid: 3e6cbcfec9864774089a93302ed5e2b1, type: 3}
---- !u!114 &114297720911553684
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1317880580496708}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3f4ab35f1cce410438013adabe9f6f03, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 0.5
-  fireCooldown: 2
-  sellCost: 2
-  trigger: {fileID: 1391618631374278, guid: 275af3cfebd278e4598dfdb40c4b2428, type: 3}
-  fangsPrefab: {fileID: 1953101660029394, guid: 5f770381e6152094888b8934afecb059,
-    type: 3}
+  abbrev: Sk
+  materials:
+  - {fileID: 2100000, guid: 3b5640089bdbc13428bb100ac2a69087, type: 2}
+  - {fileID: 2100000, guid: 9e06b42eeec87ae43bcea22ebc8bd0c1, type: 2}
+  - {fileID: 2100000, guid: fd267e3730c2a5b4086840b5acc7e538, type: 2}

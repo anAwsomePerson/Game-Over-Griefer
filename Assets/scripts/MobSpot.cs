@@ -27,6 +27,7 @@ public class MobSpot : MonoBehaviour {
 
             if(bm.SelectedTower() == null)
             {
+                bm.SelectTowerType(-1);
                 return;
             }
 

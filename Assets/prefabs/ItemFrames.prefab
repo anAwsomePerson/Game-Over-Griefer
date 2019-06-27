@@ -59,6 +59,9 @@ MonoBehaviour:
   id: 4
   cost: 1
   buyCooldown: 10
-  upgradeCost: 65535
+  upgradeCost: 0
   abbrev: It
-  baseSprite: {fileID: 21300000, guid: 11771b648d3d2c14b9b1ddeba0b6b797, type: 3}
+  materials:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}

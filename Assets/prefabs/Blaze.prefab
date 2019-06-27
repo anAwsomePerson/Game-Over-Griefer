@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1194345880351252
+--- !u!1 &1365114635177588
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,26 +8,26 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4833767645684218}
-  - component: {fileID: 33335932316611244}
-  - component: {fileID: 65739386042354188}
-  - component: {fileID: 23002312781224348}
-  - component: {fileID: 114779951975928728}
-  - component: {fileID: 114771739523461348}
+  - component: {fileID: 4814424827995908}
+  - component: {fileID: 33043045884661848}
+  - component: {fileID: 65767855143880168}
+  - component: {fileID: 23305255542861324}
+  - component: {fileID: 114264216764470770}
+  - component: {fileID: 114250157129304324}
   m_Layer: 0
-  m_Name: Witch0
+  m_Name: Blaze
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4833767645684218
+--- !u!4 &4814424827995908
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194345880351252}
+  m_GameObject: {fileID: 1365114635177588}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 48, y: 2, z: 48}
@@ -35,34 +35,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
---- !u!33 &33335932316611244
+--- !u!33 &33043045884661848
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194345880351252}
+  m_GameObject: {fileID: 1365114635177588}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!65 &65739386042354188
+--- !u!65 &65767855143880168
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194345880351252}
+  m_GameObject: {fileID: 1365114635177588}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!23 &23002312781224348
+--- !u!23 &23305255542861324
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194345880351252}
+  m_GameObject: {fileID: 1365114635177588}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -73,7 +73,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 41a7ef7fa4eb94d4d81969a057c2a19f, type: 2}
+  - {fileID: 2100000, guid: cd1dc5199d4be984daabd450b426e96f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -93,37 +93,42 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!114 &114779951975928728
+--- !u!114 &114264216764470770
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194345880351252}
+  m_GameObject: {fileID: 1365114635177588}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 06b0eee7bf57af04693f5ada16aa7a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: 2
-  cost: 2
-  buyCooldown: 10
-  upgradeCost: 1
-  abbrev: Wi
-  baseSprite: {fileID: 21300000, guid: a2c1c5ff79bb4c54fa857103fff28eb6, type: 3}
---- !u!114 &114771739523461348
+  id: 5
+  cost: 4
+  buyCooldown: 3
+  upgradeCost: 3
+  abbrev: Bl
+  materials:
+  - {fileID: 2100000, guid: cd1dc5199d4be984daabd450b426e96f, type: 2}
+  - {fileID: 2100000, guid: 7bdb4ad98860b484aacfe734159d727b, type: 2}
+  - {fileID: 2100000, guid: 0e482e2c2000df441ac7474e9a6e21e5, type: 2}
+--- !u!114 &114250157129304324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1194345880351252}
+  m_GameObject: {fileID: 1365114635177588}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ff8071a67ff78b74a80b0ee9657e981f, type: 3}
+  m_Script: {fileID: 11500000, guid: a8ac542d98a9ea047bbf4e795f0a882c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  slowness: 1.5
-  potionPrefab: {fileID: 129261449455496761, guid: a3b5d0974ae96c0498cfa19ba54e4319,
+  arrowPrefab: {fileID: 1036652506056610, guid: 9fb15c13cfd59db448c33d332495db77,
     type: 3}
-  range: 160
+  fireCooldown: 0.25
+  damage: 0.25
+  type: 2
+  range: 192

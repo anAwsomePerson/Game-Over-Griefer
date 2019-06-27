@@ -41,13 +41,25 @@ public class ScoreManager : MonoBehaviour {
 
     public void ChangeBalance(int change)
     {
-        money += change;
-        moneyText.text = "Diamonds: " + money.ToString();
+        int potentialChange = money + change;
+
+        if(potentialChange >= 0)
+        {
+            money = potentialChange;
+            moneyText.text = "Diamonds: " + money.ToString();
+        }
+        else
+        {
+            ChangeCenterText("Not enough money!");
+        }
     }
 
     public void Pause()
     {
-        timer = !timer;
+        if (stillPlaying)
+        {
+            timer = !timer;
+        }
     }
 
     public void changeGriefer(int input)
