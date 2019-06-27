@@ -9,6 +9,7 @@ public class Griefer : MonoBehaviour
     private GameObject goalGO;
     public GameObject damageObject;
     public GameObject diamond;
+    public GameObject audioPrefab;
     public Text weaknessText;
     private Transform targetPathNode;
     private int pathNodeIndex = 0;
@@ -26,7 +27,7 @@ public class Griefer : MonoBehaviour
     private float weaknessRemaining = 0f;
     private bool vulnerable = false;
     private bool witchTarget = false;
-    private AudioSource hurtSource;
+    //private AudioSource hurtSource;
     //public GameObject reachedGoalSource;
 
     // Use this for initialization
@@ -35,7 +36,7 @@ public class Griefer : MonoBehaviour
         goalGO = GameObject.Find("Goal");
         Spawner[] spawners = GameObject.FindObjectsOfType<Spawner>();
         health = baseHealth + 4 * SpawnManager.Waves() * baseHealth;
-        hurtSource = GetComponent<AudioSource>();
+        //hurtSource = GetComponent<AudioSource>();
         Spawner nearestSpawner = null;
         float distance = Mathf.Infinity;
 
@@ -231,7 +232,8 @@ public class Griefer : MonoBehaviour
     {
         //Debug.Log(health);
         Instantiate(damageObject, this.transform.position, this.transform.rotation);
-        hurtSource.Play();
+        GameObject audioGO = (GameObject)Instantiate(audioPrefab, this.transform.position, this.transform.rotation);
+        audioGO.GetComponent<AudioSource>().Play();
 
         if (type < 4)
         {
