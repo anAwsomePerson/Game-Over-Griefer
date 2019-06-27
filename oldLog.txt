@@ -1,0 +1,122 @@
+changelog from 2017-12-22 to 2019-1-4 (before I put this on Github)
+sometime between 2017-12-22 and 2017-12-30
+Game has an interface that displays balance, current lives, current wave, and time to next wave. 
+Spawners are controlled by score manager instead of themselves so they're more synchronized and don't do everything twice. 
+
+2018-1-7
+All prefabs have coordinates of (0,0,0) instead of y coordinates depending on the layer they're supposed to be in. 
+Wave cooldown starts counting from end of previous wave instead of start of previous wave. 
+Griefers flash red when taking damage. 
+
+2018-1-8
+Arrows now move faster. 
+Level 0 skeletons have less range. 
+Interface contains a button for selecting the skeleton, pausing, and sending griefers early. 
+When the game starts, selected mob is null instead of skeleton. 
+Selected mob becomes null when the player buys the selected mob. 
+Griefers and mobs look smaller. 
+The game spits out a "You win!" log when all griefers die. 
+
+2018-1-14
+Griefers now drop diamonds instead of directly increasing balance. 
+Griefers start with less health. 
+House starts with 60 stability instead of 70. 
+
+2018-1-15
+Noobs now exist and can be placed on any mine. 
+Skeleton arrows are now super effective against chicken griefers. 
+
+2018-1-16
+Cavalier griefers' speed better matches the speed in Game Over Gopher. 
+
+2018-1-21
+Witches now exist. 
+The game now has an item frame button that can be clicked to freeze all griefers for 5 seconds. 
+
+2018-2-19
+Item frames are handled by their own game object instead of by the building manager. 
+The game now has ghasts that don't do anything. 
+Blazes now exist. 
+
+2018-2-20
+Withers now exist. 
+Item frames are handled by an empty object instead of a cube. 
+The base speed and effectivenesses of Youtubers now have non-zero values. 
+
+2018-2-22
+Evokers now exist but don't do anything. 
+Creepers now exist. 
+Witches use colliders and OverlapSpheres to find targets instead of vectors. 
+
+2018-3-17
+Scripts are now stored in the scripts folder instead of the assets folder. 
+
+2018-3-18
+A bunch of instance variables are now private instead of public or neither. 
+Things now have buy cooldowns. 
+
+2018-3-15
+Mobs are compared by comparing their IDs instead of directly comparing them. 
+Messages for the player are displayed in a text in the middle of the screen instead of in the console. 
+Trying to place null no longer breaks anything. 
+Item frames and withers can be placed on any tile instead of just the regular tiles. 
+
+2018-4-2
+Evokers almost work now but the trigger doesn't work for some reason. 
+
+2018-4-3 
+The score is displayed along with "You win!"/"You lose!" 
+The damage visual effect lasts 1/16 sec instead of 1/30 sec. 
+Evokers now work. 
+Lumberjacks are no longer super rare. 
+The evoker's trigger is now invisible instead of visible. 
+The beam of evoker fangs is now wider and has a more detailed texture. 
+
+2018-4-4 
+Exploded creepers now look like gunpowder instead of like unexploded creepers. 
+Background music now exists. 
+
+2018-4-4
+Lose sound is slightly shorter. 
+Evoker fang beams are slightly longer. 
+Winning plays the win sound instead of the lose sound. 
+Spawners now spawn their griefers at the same times instead of having one spawner randomly delayed. 
+Griefers now get 4 more health per wave instead of 2. 
+Griefers are now vulnerable only after their Start methods finish executing. 
+
+2018-4-6 
+The player's house starts with 70 health instead of 60. 
+Skeletons and blazes make sound when they shoot. 
+Griefers make sounds when they take damage and when they reach the house. 
+Balance gets checked when selecting towers as well as when placing them. 
+
+2018-6-3
+Shoot sound is handled by projectiles instead of mobs, goal sound is handled by goal instead of griefers. 
+The player's house really starts with 70 health and doesn't just say so in the code. 
+
+2018-12-22 
+Bottom panel now displays the griefer type of the next wave. 
+The overworld background music is slightly louder. 
+Creepers now change material and deactivate themselves instead of becoming gunpowder objects. 
+
+2018-12-26
+Buttons for mobs display a sprite and the cost instead of a 2-letter abbreviation. Cost doesn't display when the buy cooldown is happening. 
+Wave cooldowns get shorter over the course of a level instead of always being 30 seconds. 
+
+2018-12-27 
+Mob selecting buttons disappear when the player has something selected. 
+A cancel button appears when selecting something and deselects when clicked. 
+Witches now shoot potions instead of directly slowing down nearby griefers. 
+
+2018-12-28 
+Arrows and blaze fireballs can now use colliders to hit griefers instead of only using distance between their centers. 
+
+2018-12-31 
+Buttons display cost at the top right corner instead of the bottom right corner. 
+A bunch of mine tiles were replaced by lava and regular tiles. 
+
+2019-1-2
+Text on buttons is now black instead of dark dark gray. 
+
+2019-1-4 
+The boss fight plays Impending Boom instead of Vortex. 

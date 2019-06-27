@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Potion : MonoBehaviour
 {
+    public GameObject audioPrefab;
     private int speed = 256;
     private Transform target;
     private float slowness;
@@ -11,7 +12,8 @@ public class Potion : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-
+        GameObject audioGO = (GameObject)Instantiate(audioPrefab, this.transform.position, this.transform.rotation);
+        audioGO.GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame

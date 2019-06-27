@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Arrow : MonoBehaviour {
+    public GameObject audioPrefab;
     private int speed = 256;
     private Transform target;
     private float damage;
@@ -11,7 +12,8 @@ public class Arrow : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        //GetComponent<AudioSource>().Play();
+        GameObject audioGO = (GameObject)Instantiate(audioPrefab, this.transform.position, this.transform.rotation);
+        audioGO.GetComponent<AudioSource>().Play();
     }
 
     // Update is called once per frame
