@@ -127,6 +127,5 @@ MonoBehaviour:
     type: 3}
   fireCooldown: 0.25
   damage: 0.25
-  radius: 0
   type: 2
   range: 192

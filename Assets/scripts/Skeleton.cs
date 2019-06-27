@@ -9,7 +9,7 @@ public class Skeleton : MonoBehaviour
     public float fireCooldown;
     private float fireCooldownLeft = 0f;
     public float damage;
-    public float radius;
+    //public float radius;
     public int type;
     public int range;
     //public int sellCost;
