@@ -110,7 +110,7 @@ MonoBehaviour:
   fireCooldown: 1
   damage: 1
   type: 0
-  range: 128
+  range: 160
 --- !u!114 &114502301555960624
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -9,12 +9,14 @@ public class BuildingManager : MonoBehaviour {
     public Button sellButton;
     public Text upgradeText;
     public Text sellText;
+    public Image selectedImage;
     //public int itemFramesCost = 1;
     //float frameCD = 5;
     //float frameCDRemaining = 0;
     public GameObject[] mobsArray = new GameObject[9];
     public Button[] buttons = new Button[9];
     public Text[] buttonTexts = new Text[9];
+    public Sprite[] sprites = new Sprite[9];
     private float[] cooldowns = new float[9];
     private GameObject selectedPrefab;
     private BaseMob selectedInstance;
@@ -54,6 +56,7 @@ public class BuildingManager : MonoBehaviour {
                 {
                     if (cooldowns[prefab] <= 0)
                     {
+                        selectedImage.sprite = sprites[prefab];
                         EnableSelect(false);
                         selectedPrefab = mobsArray[prefab];
                     }
@@ -82,6 +85,7 @@ public class BuildingManager : MonoBehaviour {
     public void SelectInstance(BaseMob instance)
     {
         selectedInstance = instance;
+        selectedImage.sprite = sprites[instance.id];
         EnableSelect(false);
         sellText.text = "Sell (" + (int)(selectedInstance.Spent() / 2.0) + ")";
         sellButton.gameObject.SetActive(true);
@@ -101,7 +105,7 @@ public class BuildingManager : MonoBehaviour {
             {
                 GetComponent<ScoreManager>().ChangeBalance((-1) * selectedInstance.upgradeCost);
                 selectedInstance.Upgrade();
-                SelectTowerType(-1);
+                upgradeButton.gameObject.SetActive(false);
                 SelectInstance(selectedInstance);
             }
             else
@@ -134,6 +138,7 @@ public class BuildingManager : MonoBehaviour {
     public void EnableSelect(bool enable)
     {
         cancelButton.gameObject.SetActive(!enable);
+        selectedImage.gameObject.SetActive(!enable);
 
         for (int i = 0; i < buttons.Length; i++)
         {

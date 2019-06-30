@@ -11,6 +11,7 @@ public class SpawnManager : MonoBehaviour {
     private static bool spawning = false;
     public GameObject spawner0;
     public GameObject spawner1;
+    public GameObject sendButton;
     private static bool didSpawn = false;
 
     public void SendGriefersNow()
@@ -48,6 +49,7 @@ public class SpawnManager : MonoBehaviour {
         if (ScoreManager.Timer())
         {
             spawning = spawner1.GetComponent<Spawner>().Spawning();
+            sendButton.SetActive(!spawning && (waves < totalWaves));
 
             if (!spawning && (waves < totalWaves))
             {
