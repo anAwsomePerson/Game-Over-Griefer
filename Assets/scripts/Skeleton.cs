@@ -6,20 +6,28 @@ public class Skeleton : MonoBehaviour
 {
     //Transform turretTransform;
     public GameObject arrowPrefab;
-    public float fireCooldown;
+    public float minFireCooldown;
+    public float maxFireCooldown;
     private float fireCooldownLeft = 0f;
-    public float damage;
+    public float minDamage;
+    public float maxDamage;
     //public float radius;
     public int type;
     public int range;
     //public int sellCost;
+    private float damage;
+    private float fireCooldown;
 
     // Use this for initialization
     void Start()
     {
-		/*shootSource = GetComponent<AudioSource> ();
-        turretTransform = transform.Find("Turret");
-        Instantiate(shootPrefab, this.transform.position, this.transform.rotation);*/
+        UpdateLevel();
+    }
+
+    public void UpdateLevel()
+    {
+        damage = Mathf.Pow(minDamage, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(maxDamage, GetComponent<BaseMob>().Level() * (float)(0.5));
+        fireCooldown = Mathf.Pow(maxFireCooldown, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(minFireCooldown, GetComponent<BaseMob>().Level() * (float)(0.5));
     }
 
     // Update is called once per frame

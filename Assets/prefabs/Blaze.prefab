@@ -128,7 +128,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 1036652506056610, guid: 9fb15c13cfd59db448c33d332495db77,
     type: 3}
-  fireCooldown: 0.25
-  damage: 0.25
+  minFireCooldown: 0.125
+  maxFireCooldown: 0.25
+  minDamage: 0.25
+  maxDamage: 0.25
   type: 2
   range: 192

@@ -16,9 +16,14 @@ public class Evoker : MonoBehaviour {
 	void Start () {
         ResetTrigger();
     }
-	
-	// Update is called once per frame
-	void Update () {
+
+    public void UpdateLevel()
+    {
+        //damage = Mathf.Pow(minDamage, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(maxDamage, GetComponent<BaseMob>().Level() * (float)(0.5));
+    }
+
+    // Update is called once per frame
+    void Update () {
         if (ScoreManager.Timer())
         {
             fireCooldownLeft -= Time.deltaTime;
