@@ -6400,7 +6400,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 027c55098991b3c409dbefa3ea144b3e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 70
+  lives: 80
   money: 5
   nextGriefer: {fileID: 559329325}
   moneyText: {fileID: 1160207969}
@@ -12630,7 +12630,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:

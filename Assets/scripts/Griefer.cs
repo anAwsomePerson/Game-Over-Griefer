@@ -35,8 +35,8 @@ public class Griefer : MonoBehaviour
     {
         goalGO = GameObject.Find("Goal");
         Spawner[] spawners = GameObject.FindObjectsOfType<Spawner>();
-        health = baseHealth + 4 * SpawnManager.Waves() * baseHealth;
-        //hurtSource = GetComponent<AudioSource>();
+        health = 2 * baseHealth + 4 * SpawnManager.Waves() * baseHealth;
+        //Debug.Log(health);
         Spawner nearestSpawner = null;
         float distance = Mathf.Infinity;
 

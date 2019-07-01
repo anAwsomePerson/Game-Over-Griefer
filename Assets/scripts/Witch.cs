@@ -3,17 +3,21 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Witch : MonoBehaviour {
-    public float slowness;
+    public float minSlowness;
+    public float maxSlowness;
     public GameObject potionPrefab;
     public int range;
-    //public int sellCost;
+    private float slowness;
 
     // Use this for initialization
     void Start()
     {
-        /*shootSource = GetComponent<AudioSource> ();
-        turretTransform = transform.Find("Turret");
-        Instantiate(shootPrefab, this.transform.position, this.transform.rotation);*/
+        UpdateLevel();
+    }
+
+    public void UpdateLevel()
+    {
+        slowness = Mathf.Pow(minSlowness, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(maxSlowness, GetComponent<BaseMob>().Level() * (float)(0.5));
     }
 
     // Update is called once per frame
