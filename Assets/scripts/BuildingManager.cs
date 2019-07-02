@@ -37,7 +37,7 @@ public class BuildingManager : MonoBehaviour {
 
                     if (cooldowns[i] <= 0)
                     {
-                        buttonTexts[i].text = mobsArray[i].GetComponent<BaseMob>().cost.ToString();
+                        buttonTexts[i].gameObject.SetActive(true);
                     }
                 }
             }
@@ -118,8 +118,8 @@ public class BuildingManager : MonoBehaviour {
     public void Sell()
     {
         GetComponent<ScoreManager>().ChangeBalance((int)(selectedInstance.Spent() / 2.0));
-        SelectTowerType(-1);
         selectedInstance.Remove();
+        SelectTowerType(-1);
     }
 
     public GameObject SelectedTower()
@@ -131,7 +131,7 @@ public class BuildingManager : MonoBehaviour {
     {
         //Debug.Log(id + " " + cooldown);
         cooldowns[id] = cooldown;
-        buttonTexts[id].text = "";
+        buttonTexts[id].gameObject.SetActive(false);
     }
 
     public void EnableSelect(bool enable)

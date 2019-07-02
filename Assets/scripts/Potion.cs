@@ -5,7 +5,7 @@ using UnityEngine;
 public class Potion : MonoBehaviour
 {
     public GameObject audioPrefab;
-    private int speed = 256;
+    private int speed = 512;
     private Transform target;
     private float slowness;
 
