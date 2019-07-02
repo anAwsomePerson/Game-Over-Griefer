@@ -21,7 +21,7 @@ public class Skeleton : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        UpdateLevel();
+        //UpdateLevel();
     }
 
     public void UpdateLevel()

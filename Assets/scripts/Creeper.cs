@@ -3,19 +3,27 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Creeper : MonoBehaviour {
-    public float damage;
+    public float minDamage;
+    public float maxDamage;
     public float radius;
-    public float sellCost;
+    //public float sellCost;
     public float fireCooldown;
     public Material gunpowder;
     //public Material creeper0;
     private bool loaded;
     private float fireCDRemaining;
+    private float damage;
 
 	// Use this for initialization
 	void Start () {
         loaded = true;
+        //UpdateLevel();
 	}
+
+    public void UpdateLevel()
+    {
+        damage = Mathf.Pow(minDamage, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(maxDamage, GetComponent<BaseMob>().Level() * (float)(0.5));
+    }
 
     // Update is called once per frame
     void Update()

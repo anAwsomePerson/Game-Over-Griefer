@@ -12,7 +12,7 @@ public class Witch : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        UpdateLevel();
+        //UpdateLevel();
     }
 
     public void UpdateLevel()

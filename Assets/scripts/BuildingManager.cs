@@ -105,8 +105,7 @@ public class BuildingManager : MonoBehaviour {
             {
                 GetComponent<ScoreManager>().ChangeBalance((-1) * selectedInstance.upgradeCost);
                 selectedInstance.Upgrade();
-                upgradeButton.gameObject.SetActive(false);
-                SelectInstance(selectedInstance);
+                SelectTowerType(-1);
             }
             else
             {

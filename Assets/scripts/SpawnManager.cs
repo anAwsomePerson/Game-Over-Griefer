@@ -74,7 +74,7 @@ public class SpawnManager : MonoBehaviour {
                 spawner0.GetComponent<Spawner>().SetSpawning(true);
                 spawner1.GetComponent<Spawner>().SetSpawning(true);
                 GameObject.FindObjectOfType<ScoreManager>().changeGriefer(-1);
-                waveCDRemaining = waveCD * (1.0f - (float)waves / (float)totalWaves);
+                waveCDRemaining = waveCD * (1.0f - (float)waves / (2.0f * (float)totalWaves));
 
                 if (waves == totalWaves)
                 {

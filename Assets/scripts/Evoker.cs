@@ -17,7 +17,7 @@ public class Evoker : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         ResetTrigger();
-        UpdateLevel();
+        //UpdateLevel();
     }
 
     public void UpdateLevel()

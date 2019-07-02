@@ -39,6 +39,28 @@ public class BaseMob : MonoBehaviour {
         {
             GetComponent<MeshRenderer>().material = Material();
         }
+
+        switch (id)
+        {
+            case 0:
+                GetComponent<Skeleton>().UpdateLevel();
+                break;
+            case 2:
+                GetComponent<Witch>().UpdateLevel();
+                break;
+            case 3:
+                //GetComponent<Skeleton>().UpdateLevel();
+                break;
+            case 5:
+                GetComponent<Skeleton>().UpdateLevel();
+                break;
+            case 7:
+                GetComponent<Evoker>().UpdateLevel();
+                break;
+            case 8:
+                GetComponent<Creeper>().UpdateLevel();
+                break;
+        }
     }
 
     public void Remove()

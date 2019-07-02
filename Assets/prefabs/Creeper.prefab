@@ -126,8 +126,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 38fe3211cde4b5748b4280c15d0a2418, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 5
+  minDamage: 5
+  maxDamage: 10
   radius: 64
-  sellCost: 1
   fireCooldown: 6
   gunpowder: {fileID: 2100000, guid: f896970baf4ddf44f9dd1e69df65b2ef, type: 2}

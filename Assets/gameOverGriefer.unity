@@ -6489,7 +6489,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 92d8b78e2ca3f1746a02874f9c2811ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waveCD: 30
+  waveCD: 35
   spawner0: {fileID: 1694180231}
   spawner1: {fileID: 1036330984}
   sendButton: {fileID: 25547957}
