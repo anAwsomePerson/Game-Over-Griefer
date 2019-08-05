@@ -6,6 +6,7 @@ public class Skeleton : MonoBehaviour
 {
     //Transform turretTransform;
     public GameObject arrowPrefab;
+    public GameObject rangePrefab;
     public float minFireCooldown;
     public float maxFireCooldown;
     private float fireCooldownLeft = 0f;
@@ -17,17 +18,26 @@ public class Skeleton : MonoBehaviour
     //public int sellCost;
     private float damage;
     private float fireCooldown;
+    private GameObject rangeGO;
 
     // Use this for initialization
     void Start()
     {
-        //UpdateLevel();
+        rangeGO = Instantiate(rangePrefab, transform.position, transform.rotation);
+        rangeGO.transform.localScale = new Vector3(2 * range, 3, 2 * range);
+        rangeGO.SetActive(false);
+        //Debug.Log("scaled");
     }
 
     public void UpdateLevel()
     {
         damage = Mathf.Pow(minDamage, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(maxDamage, GetComponent<BaseMob>().Level() * (float)(0.5));
         fireCooldown = Mathf.Pow(maxFireCooldown, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(minFireCooldown, GetComponent<BaseMob>().Level() * (float)(0.5));
+    }
+
+    public GameObject RangeGO()
+    {
+        return (rangeGO);
     }
 
     // Update is called once per frame
@@ -80,6 +90,6 @@ public class Skeleton : MonoBehaviour
         GameObject bulletGO = (GameObject)Instantiate(arrowPrefab, this.transform.position, this.transform.rotation);
         Arrow arrow = bulletGO.GetComponent<Arrow>();
         arrow.Set(griefer.transform, damage, type);
-		//shootSource.Play();
+        //shootSource.Play();
     }
 }

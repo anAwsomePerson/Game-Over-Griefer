@@ -107,6 +107,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 1408228870502992, guid: cfee21b7c0e90bf48b6af5bf8e0752b6,
     type: 3}
+  rangePrefab: {fileID: 8792429746999783019, guid: 526fcc40211b18c46a17f5dcc460e383,
+    type: 3}
   minFireCooldown: 1
   maxFireCooldown: 1
   minDamage: 1
@@ -125,6 +127,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 06b0eee7bf57af04693f5ada16aa7a68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hasRange: 0
   id: 0
   cost: 4
   buyCooldown: 3

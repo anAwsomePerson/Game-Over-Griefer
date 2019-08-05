@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class BaseMob : MonoBehaviour {
+    public bool hasRange;
     public int id;
     public int cost;
     public float buyCooldown;
@@ -20,6 +21,20 @@ public class BaseMob : MonoBehaviour {
         {
             BuildingManager bm = GameObject.FindObjectOfType<BuildingManager>();
             bm.SelectInstance(this);
+
+            switch (id)
+            {
+                case 0:
+                    GetComponent<Skeleton>().RangeGO().SetActive(true);
+                    //Debug.Log("set active");
+                    break;
+                case 2:
+                    GetComponent<Witch>().RangeGO().SetActive(true);
+                    break;
+                case 5:
+                    GetComponent<Skeleton>().RangeGO().SetActive(true);
+                    break;
+            }
         }
     }
 

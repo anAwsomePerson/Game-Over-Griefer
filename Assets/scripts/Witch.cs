@@ -6,18 +6,27 @@ public class Witch : MonoBehaviour {
     public float minSlowness;
     public float maxSlowness;
     public GameObject potionPrefab;
+    public GameObject rangePrefab;
     public int range;
     private float slowness;
+    private GameObject rangeGO;
 
     // Use this for initialization
     void Start()
     {
-        //UpdateLevel();
+        rangeGO = Instantiate(rangePrefab, transform.position, transform.rotation);
+        rangeGO.transform.localScale = new Vector3(2 * range, 3, 2 * range);
+        rangeGO.SetActive(false);
     }
 
     public void UpdateLevel()
     {
         slowness = Mathf.Pow(minSlowness, GetComponent<BaseMob>().Level() * (float)(-0.5) + 1) * Mathf.Pow(maxSlowness, GetComponent<BaseMob>().Level() * (float)(0.5));
+    }
+
+    public GameObject RangeGO()
+    {
+        return (rangeGO);
     }
 
     // Update is called once per frame
