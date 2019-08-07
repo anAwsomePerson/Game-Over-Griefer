@@ -80,9 +80,20 @@ public class BaseMob : MonoBehaviour {
 
     public void Remove()
     {
-        if(id == 7)
+        switch (id)
         {
-            Destroy(GetComponent<Evoker>().trigger);
+            case 0:
+                GetComponent<Skeleton>().Remove();
+                break;
+            case 2:
+                GetComponent<Witch>().Remove();
+                break;
+            case 5:
+                GetComponent<Skeleton>().Remove();
+                break;
+            case 7:
+                GetComponent<Evoker>().Remove();
+                break;
         }
 
         spot.Unoccupy();

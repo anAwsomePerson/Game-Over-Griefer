@@ -89,4 +89,9 @@ public class Witch : MonoBehaviour {
         potion.Set(griefer.transform, slowness);
         //shootSource.Play ();
     }
+
+    public void Remove()
+    {
+        Destroy(rangeGO);
+    }
 }

@@ -73,6 +73,22 @@ public class BuildingManager : MonoBehaviour {
             }
             else
             {
+                if(selectedInstance != null)
+                {
+                    switch (selectedInstance.id)
+                    {
+                        case 0:
+                            selectedInstance.GetComponent<Skeleton>().RangeGO().SetActive(false);
+                            break;
+                        case 2:
+                            selectedInstance.GetComponent<Witch>().RangeGO().SetActive(false);
+                            break;
+                        case 5:
+                            selectedInstance.GetComponent<Skeleton>().RangeGO().SetActive(false);
+                            break;
+                    }
+                }
+
                 selectedPrefab = null;
                 selectedInstance = null;
                 upgradeButton.gameObject.SetActive(false);

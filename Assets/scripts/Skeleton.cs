@@ -92,4 +92,9 @@ public class Skeleton : MonoBehaviour
         arrow.Set(griefer.transform, damage, type);
         //shootSource.Play();
     }
+
+    public void Remove()
+    {
+        Destroy(rangeGO);
+    }
 }

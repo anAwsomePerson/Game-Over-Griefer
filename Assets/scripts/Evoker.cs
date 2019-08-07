@@ -54,4 +54,9 @@ public class Evoker : MonoBehaviour {
         triggerGO = (GameObject)Instantiate(trigger, this.transform.position, this.transform.rotation);
         triggerGO.GetComponent<Trigger>().SetEvoker(gameObject);
     }
+
+    public void Remove()
+    {
+        Destroy(triggerGO);
+    }
 }
